@@ -45,18 +45,18 @@ public class SecurityConfig {
         return http.build();
     }
 
-    @Bean
-    public CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("http://localhost:4200"); // Permitir o Angular
-        config.addAllowedMethod("*"); // Permitir todos os métodos
-        config.addAllowedHeader("*"); // Permitir todos os cabeçalhos
-        config.setAllowCredentials(true);
-
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", config);
-        return source;
-    }
+//    @Bean
+//    public CorsConfigurationSource corsConfigurationSource() {
+//        CorsConfiguration config = new CorsConfiguration();
+//        config.addAllowedOrigin("http://localhost:4200"); // Permitir o Angular
+//        config.addAllowedMethod("*"); // Permitir todos os métodos
+//        config.addAllowedHeader("*"); // Permitir todos os cabeçalhos
+//        config.setAllowCredentials(true);
+//
+//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//        source.registerCorsConfiguration("/**", config);
+//        return source;
+//    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
